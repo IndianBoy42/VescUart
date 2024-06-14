@@ -1,10 +1,10 @@
 /*
-	Copyright 2016 Benjamin Vedder	benjamin@vedder.se
+        Copyright 2016 Benjamin Vedder	benjamin@vedder.se
 
-	This file is part of the VESC firmware.
+        This file is part of the VESC firmware.
 
-	The VESC firmware is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
+        The VESC firmware is free software: you can redistribute it and/or
+   modify it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
@@ -22,13 +22,15 @@
 
 #include <stdint.h>
 
-void buffer_append_int16(uint8_t* buffer, int16_t number, int32_t *index);
-void buffer_append_uint16(uint8_t* buffer, uint16_t number, int32_t *index);
-void buffer_append_int32(uint8_t* buffer, int32_t number, int32_t *index);
-void buffer_append_uint32(uint8_t* buffer, uint32_t number, int32_t *index);
-void buffer_append_float16(uint8_t* buffer, float number, float scale, int32_t *index);
-void buffer_append_float32(uint8_t* buffer, float number, float scale, int32_t *index);
-void buffer_append_float32_auto(uint8_t* buffer, float number, int32_t *index);
+void buffer_append_int16(uint8_t *buffer, int16_t number, int32_t *index);
+void buffer_append_uint16(uint8_t *buffer, uint16_t number, int32_t *index);
+void buffer_append_int32(uint8_t *buffer, int32_t number, int32_t *index);
+void buffer_append_uint32(uint8_t *buffer, uint32_t number, int32_t *index);
+void buffer_append_float16(uint8_t *buffer, float number, float scale,
+                           int32_t *index);
+void buffer_append_float32(uint8_t *buffer, float number, float scale,
+                           int32_t *index);
+void buffer_append_float32_auto(uint8_t *buffer, float number, int32_t *index);
 int16_t buffer_get_int16(const uint8_t *buffer, int32_t *index);
 uint16_t buffer_get_uint16(const uint8_t *buffer, int32_t *index);
 int32_t buffer_get_int32(const uint8_t *buffer, int32_t *index);
@@ -37,6 +39,6 @@ float buffer_get_float16(const uint8_t *buffer, float scale, int32_t *index);
 float buffer_get_float32(const uint8_t *buffer, float scale, int32_t *index);
 float buffer_get_float32_auto(const uint8_t *buffer, int32_t *index);
 bool buffer_get_bool(const uint8_t *buffer, int32_t *index);
-void buffer_append_bool(uint8_t *buffer,bool value, int32_t *index);
+void buffer_append_bool(uint8_t *buffer, bool value, int32_t *index);
 
 #endif /* BUFFER_H_ */
